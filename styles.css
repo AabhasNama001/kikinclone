@@ -1,0 +1,1024 @@
+@font-face {
+    font-family: Deacon;
+    src: url(./fonts/DeaconCondensedTest-Black-BF63c8afdb5bf2d.otf);
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: Deacon;
+    src: url(./fonts/DeaconCondensedTest-Bold-BF63c8afdda0cc7.otf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Deacon;
+    src: url(./fonts/DeaconCondensedTest-Medium-BF63c8afddae2eb.otf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Deacon;
+    src: url(./fonts/DeaconCondensedTest-Light-BF63c8afdd389e2.otf);
+    font-weight: 300;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Deacon";
+    color: white;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+nav {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #122315;
+}
+
+.menu-items,
+.right-div {
+    display: flex;
+    gap: 20px;
+}
+
+.menu-items h2,
+.right-div button {
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.right-div .btn-1 {
+    padding: 10px 14px;
+    border: none;
+    background-color: #122315;
+    border-radius: 10px;
+    border: 1px solid #eee;
+}
+
+
+/* Hamburger styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+    background: #77E46E;
+    padding: 12px;
+    border-radius: 50%;
+}
+
+/* Side menu */
+.side-menu {
+    position: fixed;
+    top: -100vh;
+    height: 100vh;
+    width: 100vw;
+    background-color: #122315;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: top 0.3s ease;
+    padding: 50px 20px;
+    z-index: 1000;
+}
+
+.side-menu.active {
+    top: 0;
+}
+
+.side-menu h2 {
+    font-size: 16px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 600;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.close-btn {
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 2px;
+    background-color: #77E46E;
+    border-radius: 50%;
+}
+
+#hero-section {
+    background-color: #122315;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vw;
+    overflow-x: hidden;
+}
+
+#hero-section h1 {
+    text-align: center;
+    font-size: 17vw;
+    font-weight: 800;
+    line-height: 14vw;
+}
+
+#hero-section .future-text {
+    color: #55DD4A;
+}
+
+#hero-section img {
+    width: 100vw;
+    object-fit: cover;
+}
+
+
+.btn {
+    background-color: #55DD4A;
+    padding-inline: 25px;
+    padding-block: 15px;
+    font-size: 20px;
+    border: none;
+    color: black;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+.image-bg {
+    position: relative;
+}
+
+.image-bg p {
+    position: absolute;
+    font-size: 1px;
+    top: 15vw;
+    left: 50vw;
+    width: 70vw;
+    text-align: center;
+    font-size: 15px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.image-bg img {
+    height: 50vh;
+}
+
+#good-for-planet-section {
+    position: relative;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#good-for-planet-section .circleimg {
+    position: absolute;
+    height: 100px;
+}
+
+#good-for-planet-section img:nth-child(1) {
+    left: 1vw;
+    top: 5px;
+}
+
+#good-for-planet-section img:nth-child(2) {
+    right: 1vw;
+    top: 10px;
+}
+
+#good-for-planet-section img:nth-child(3) {
+    left: 1vw;
+    bottom: 10px;
+}
+
+#good-for-planet-section img:nth-child(4) {
+    right: 1vw;
+    bottom: 10px;
+}
+
+#good-for-planet-section img:nth-child(5) {
+    right: 30vw;
+    bottom: -20px;
+}
+
+.good-for-planet-section-heading {
+    /* margin-top: 10px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.good-for-planet-section-heading h1 {
+    text-align: center;
+    font-size: 57px;
+    font-weight: 800;
+    line-height: 60px;
+    color: black;
+
+}
+
+.good-for-planet-section-heading p {
+    color: black;
+    text-align: center;
+    width: 80vw;
+}
+
+#grow-with-flow-section {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.grow-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90vw;
+    gap: 10px;
+}
+
+.content h1 {
+    color: black;
+}
+
+.content p {
+    color: black;
+}
+
+.content img {
+    width: 280px;
+    border-radius: 10px;
+}
+
+.line {
+    height: 1px;
+    width: 280px;
+    background-color: black;
+}
+
+.line2 {
+    display: none;
+    height: 1px;
+    width: 90vw;
+    margin: auto;
+    background-color: black;
+}
+
+
+#calculation-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #122315;
+    padding: 20px;
+    gap: 40px;
+}
+
+.left-calc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.left-calc h1 {
+    font-size: 45px;
+}
+
+.calcImages {
+    display: none;
+}
+
+.right-calc {
+    max-width: 600px;
+    width: 100%;
+    padding: 2rem;
+    border: 1px solid white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.slider-group {
+    margin-bottom: 2rem;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+input[type="range"] {
+    width: 100%;
+    appearance: none;
+    height: 8px;
+    background: #8b7272;
+    border-radius: 5px;
+    outline: none;
+    margin-top: 0.5rem;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #3f8e0b;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.value {
+    font-size: 1rem;
+    margin-top: 0.3rem;
+    color: #555;
+}
+
+.result {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #0a5;
+}
+
+.line3 {
+    height: 1px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 100%;
+    background-color: white;
+}
+
+.discount-images {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bgLaptop {
+    height: 80vh;
+    background-image: url(./images/hands.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 80px;
+}
+
+.bgLaptop h1 {
+    font-size: 100px;
+    text-align: center;
+}
+
+#who-we-fund-section-2 {
+    display: flex;
+    flex-direction: column;
+    background-color: #73D3EB;
+    height: 100vh;
+    padding-top: 30px;
+    border-bottom: 1px solid black;
+
+}
+
+.uk-based {
+    border: 1px solid black;
+    padding: 20px;
+}
+
+.uk-based img {
+    margin-bottom: 10px;
+
+}
+
+.uk-based h1 {
+    color: black;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+#marquee {
+    display: flex;
+    overflow-x: hidden;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #73D3EB;
+    gap: 50px;
+}
+
+.marque1 {
+    display: flex;
+    animation: marqueeEffect 6s linear infinite;
+    gap: 50px;
+}
+
+.marque1 img {
+    height: 40px;
+    width: 120px;
+}
+
+@keyframes marqueeEffect {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+#do-it-section {
+    background-color: #122315;
+    position: relative;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#do-it-section .doitimgdiv img {
+    position: absolute;
+    height: 100px;
+}
+
+#do-it-section img:nth-child(1) {
+    left: -5vh;
+    top: 5vw;
+}
+
+#do-it-section img:nth-child(2) {
+    right: 1vw;
+    top: 10px;
+}
+
+#do-it-section img:nth-child(3) {
+    left: 1vw;
+    bottom: 10px;
+}
+
+#do-it-section img:nth-child(4) {
+    left: 30vw;
+    top: 10px;
+    transform: rotate(-20deg);
+}
+
+#do-it-section img:nth-child(5) {
+    right: 4vw;
+    bottom: 50px;
+    transform: rotate(-20deg);
+}
+
+#do-it-section img:nth-child(6) {
+    display: none;
+}
+
+#do-it-section img:nth-child(7) {
+    display: none;
+}
+
+#do-it-section img:nth-child(8) {
+    display: none;
+}
+
+#do-it-section img:nth-child(9) {
+    display: none;
+}
+
+.doitheading {
+    margin-top: 20px;
+    text-align: center;
+    line-height: 8vw;
+    font-size: 4vw;
+}
+
+.doitheading h1 {
+    color: #566053;
+}
+
+#doing-good-together-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    gap: 40px;
+}
+
+.bottleimgdiv img {
+    height: 90vw;
+}
+
+.doinggoodtext h1 {
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 50px;
+    text-align: justify;
+    color: black;
+}
+
+.doinggoodtext p {
+    margin-top: 20px;
+    color: black;
+    text-align: justify;
+    width: 70vw;
+}
+
+.citizen {
+    margin-top: 20px;
+}
+
+.citizen h2 {
+    color: rgb(28, 9, 67);
+}
+
+.citizen h4 {
+    color: black;
+    font-weight: 400;
+}
+
+#images {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#images img {
+    height: 25vh;
+    width: 30vh;
+    position: relative;
+}
+
+#footer {
+    height: 100vh;
+    background-color: #122315;
+    background-image: url(./images/bg2.png);
+    box-shadow: inset 0 -220px 80px -30px rgba(0, 0, 0, 0.6);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#footer h1 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    color: white;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    text-align: center;
+}
+
+#footer h1:nth-child(2) {
+    top: 25%;
+    color: #55DD4A;
+}
+
+#footer h1:nth-child(3) {
+    top: 30%;
+    color: #55DD4A;
+}
+
+footer {
+    background-color: #0e2317;
+    padding: 40px 20px;
+    border-top: 1px solid #2d3e34;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin: auto;
+}
+
+.footer-left h3 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.footer-left a {
+    font-size: 2.5rem;
+    color: #d1f7c4;
+    text-decoration: underline;
+}
+
+.footer-center p {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.footer-right a {
+    display: block;
+    color: white;
+    margin-bottom: 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-right a:hover {
+    color: #72ff7e;
+}
+
+.footer-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.footer-buttons button {
+    padding: 10px 20px;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.footer-buttons button:hover {
+    background: white;
+    color: #0e2317;
+}
+
+/* Responsive */
+
+@media (max-width: 500px) {
+    .footer-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .footer-buttons button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 320px) {
+    #images img {
+        height: 15vh;
+        width: 20vh;
+        position: relative;
+    }
+}
+
+@media (max-width: 345px) {
+    #footer h1:nth-child(2) {
+        top: 30%;
+    }
+
+    #footer h1:nth-child(3) {
+        top: 38%;
+    }
+}
+
+@media (min-width: 420px) {
+
+    .image-bg p {
+        top: 25px;
+    }
+
+    .uk-based h1 {
+        font-weight: 600;
+        font-size: 30px;
+    }
+
+    #footer h1 {
+        font-size: 35px;
+    }
+
+    #footer h1:nth-child(2) {
+        top: 27%;
+    }
+
+    #footer h1:nth-child(3) {
+        top: 34%;
+    }
+}
+
+@media (min-width: 580px) {
+
+    .image-bg p {
+        top: 5vh;
+    }
+
+    #good-for-planet-section {
+        height: 85vh;
+    }
+
+    #grow-with-flow-section .content {
+        padding: 10px;
+        flex-direction: row;
+        gap: 20px;
+        align-items: start;
+    }
+
+    #grow-with-flow-section .content p {
+        width: 45vh;
+    }
+
+    .line {
+        display: none;
+    }
+
+    .line2 {
+        display: block;
+    }
+
+    br {
+        display: none;
+    }
+
+    #grow-with-flow-section {
+        padding: 4vw;
+    }
+
+    .grow-heading {
+        align-items: start;
+        width: 50%;
+        /* padding-left: 4vw; */
+    }
+
+    .imgDiv {
+        width: 50%;
+        display: flex;
+        align-items: end;
+        justify-content: end;
+    }
+
+    .bgLaptop h1 {
+        text-align: end;
+    }
+
+    .doitheading {
+        line-height: 40px;
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .right-calc {
+        padding: 1rem;
+    }
+
+    .result {
+        font-size: 1.5rem;
+    }
+}
+
+
+@media (min-width: 760px) {
+
+    #hero-section {
+        gap: 4vh;
+    }
+
+    #hero-section h1 {
+        font-size: 120px;
+        line-height: 19vh;
+    }
+
+    .image-bg p {
+        top: 20px;
+    }
+
+    .doitheading {
+        line-height: 50px;
+        font-size: 30px;
+    }
+
+    #do-it-section {
+        height: 100vh;
+    }
+
+    #footer h1 {
+        font-size: 45px;
+    }
+
+    #footer h1:nth-child(2) {
+        top: 27%;
+    }
+
+    #footer h1:nth-child(3) {
+        top: 34%;
+    }
+
+    .footer-left img {
+        transform: rotate(-90deg);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .menu-items,
+    .right-div {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+@media (min-width: 1020px) {
+    #hero-section h1 {
+        line-height: 18vh;
+    }
+
+    .image-bg p {
+        font-size: 18px;
+        width: 40%;
+    }
+
+    .good-for-planet-section-heading {
+        gap: 40px;
+    }
+
+    .good-for-planet-section-heading h1 {
+        font-size: 100px;
+    }
+
+    .good-for-planet-section-heading p {
+        width: 50vw;
+    }
+
+    #calculation-section {
+        flex-direction: row;
+        padding: 40px;
+        align-items: start;
+        justify-content: space-between;
+    }
+
+    .left-calc {
+        width: 50%;
+    }
+
+    .right-calc {
+        width: 50%;
+    }
+
+    .left-calc h1 {
+        font-size: 80px;
+        line-height: 80px;
+    }
+
+    .calcImages {
+        display: block;
+    }
+
+    #who-we-fund-section-2 {
+        flex-direction: row;
+        height: 55vh;
+    }
+
+    .uk-based {
+        border: 1px solid black;
+        width: 33.4%;
+    }
+
+    .uk-based img {
+        margin-bottom: 40px;
+    }
+
+    .uk-based h1 {
+        font-size: 35px;
+        font-weight: 800;
+    }
+
+    .doitheading {
+        line-height: 65px;
+        font-size: 40px;
+    }
+
+    #do-it-section img:nth-child(6) {
+        display: block;
+        top: 72vh;
+    }
+
+    #do-it-section img:nth-child(7) {
+        display: block;
+        top: 2vh;
+        right: 30vw;
+        transform: rotate(30deg);
+    }
+
+    #do-it-section img:nth-child(8) {
+        display: block;
+        bottom: 2vh;
+        right: 20vw;
+        transform: rotate(10deg);
+    }
+
+    #do-it-section img:nth-child(9) {
+        display: block;
+        bottom: 2vh;
+        left: 45vw;
+    }
+
+    #doing-good-together-section {
+        flex-direction: row;
+        padding-top: 0;
+    }
+
+    .bottleimgdiv {
+        width: 30%;
+    }
+
+    .doinggoodtext {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding: 50px;
+    }
+
+
+    .bottleimgdiv img {
+        height: 90vh;
+    }
+
+    .doinggoodtext h1 {
+        font-size: 90px;
+        line-height: 80px;
+        text-align: justify;
+    }
+
+    .doinggoodtext p {
+        margin-top: 40px;
+        text-align: justify;
+        width: 50vw;
+    }
+
+    .citizen {
+        margin-top: 20px;
+    }
+
+    .citizen h2 {
+        color: rgb(28, 9, 67);
+    }
+
+    .citizen h4 {
+        color: black;
+        font-weight: 400;
+    }
+
+    #images img {
+        top: -10vh;
+        left: -20vh;
+    }
+
+    #footer h1 {
+        font-size: 85px;
+    }
+
+    #footer h1:nth-child(2) {
+        top: 35%;
+    }
+
+    #footer h1:nth-child(3) {
+        top: 52%;
+    }
+
+     .footer-grid{
+        margin-left: 100px;
+    }
+}
+
+@media (min-width:1200px) {
+    #footer h1 {
+        font-size: 105px;
+    }
+
+    #footer h1:nth-child(2) {
+        top: 35%;
+    }
+
+    #footer h1:nth-child(3) {
+        top: 52%;
+    }
+}
